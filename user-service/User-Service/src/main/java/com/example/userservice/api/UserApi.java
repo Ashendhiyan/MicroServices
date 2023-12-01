@@ -52,7 +52,7 @@ public class UserApi {
 
     @PostMapping("/save")
     public ResponseEntity<String> saveItem(@RequestBody ItemDTO itemDto){
-        return new ResponseEntity<>(restTemplate.postForObject("http://localhost:8080/itemService/api/v1/item",itemDto, String.class),HttpStatus.OK);
+        return new ResponseEntity<>(restTemplate.postForObject("http://itemService/itemService/api/v1/item",itemDto, String.class),HttpStatus.OK);
     }
 
     @PutMapping("/update")
